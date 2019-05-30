@@ -1,136 +1,26 @@
-$(document).ready(function() {
+const iframeVideo = document.querySelector('.iframe-tizer');
 
-    /* Tabs */
-    $('.tab-content.current').slick({
-        dots: false,
-        infinite: false,
-        speed: 600,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        prevArrow: '<div class="btn prev-arrow"><img src="/bin/street/images/prev-arrow.png"></div>',
-        nextArrow: '<div class="btn next-arrow"><img src="/bin/street/images/next-arrow.png"></div>',
-        responsive: [{
-                breakpoint: 1280,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    });
+//Click mainTizer
+const mainTizerPlayButton = document.querySelector('.play-tizer');
+mainTizerPlayButton.addEventListener('click', (e) => playVideo(e.currentTarget.dataset.src));
 
-    $(document).on('click', 'ul.tabs li', function() {
-        var tab_id = $(this).attr('data-tab');
+// Click one of tizers
+const previewTizers = document.querySelectorAll('.preview');
+previewTizers.forEach(item => {
+    item.addEventListener('click', (e) => playVideo(e.currentTarget.dataset.src))
+})
+// Click button close video
+const closeVideoButton = document.querySelector('.close-tizer');
+closeVideoButton.addEventListener('click', () => closeVideo());
 
-        $('ul.tabs li').removeClass('current');
-        $('.tab-content').removeClass('current');
-
-        $(this).addClass('current');
-
-        if($(this).text() == 'Тизеры'){
-          $('.add_grid').css('display', 'none');
-        }
-        else{
-          $('.add_grid').css('display', '');
-        }
-
-        $("." + tab_id).addClass('current').slick({
-            dots: false,
-        infinite: false,
-        speed: 600,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        prevArrow: '<div class="btn prev-arrow"><img src="/bin/street/images/prev-arrow.png"></div>',
-        nextArrow: '<div class="btn next-arrow"><img src="/bin/street/images/next-arrow.png"></div>',
-        responsive: [{
-                breakpoint: 1280,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    });
-    })
-
-  /*   var slideIndex = 0;
-   $('.add_grid').on('click', function() {
-        slideIndex++;
-        $('.carousel').slick('slickAdd', '<div><h3>dfgdgfdgdgfddgf' + slideIndex + '</h3></div>');
-    }); 
-
-    $('.js-remove-slide').on('click', function() {
-        $('.carousel').slick('slickRemove', slideIndex - 1);
-        if (slideIndex !== 0) {
-            slideIndex--;
-        }
-    });
-*/
-    $(document).on('click', '.add_grid', function() {
-        $('.carousel').slick('unslick');
-        $('.preview img').css({ 'margin-bottom': '-7px' });
-        $(this).css('display', 'none');
-    })
-
-    $(document).on('click', '.play-tizer', function() {
-       ga('send', 'event', 'Street', 'Play', 'Main Tizer');
-        $('.iframe-tizer').css({ 'display': 'flex' }).prepend('<iframe src="https://rutube.ru/play/embed/11978730?autoStart=true" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen allowscriptaccess="always" allow="autoplay"></iframe>');
-
-        /*  var player = document.querySelector('iframe');
-          player.contentWindow.postMessage(JSON.stringify({
-              data: {
-                  isFullscreen: true
-              },
-              type: 'player:changeFullscreen'
-          }), '*'); */
-    })
-    $(document).on('click', '.preview', function() {
-        var iframeSrc = $(this).parents('.carousel__item').attr('data-src');
-        var slideId = $(this).parents('.slick-slide').attr('data-slick-index');
-if($(this).parents('.carousel').length !== 0){
-       ga('send', 'event', 'Street', 'Play', `Series ${iframeSrc}`);
+// Open iframe with video tizer
+const playVideo = (iframeSrc) => {
+    ga('send', 'event', 'Roast', 'Play', `Tizer ${iframeSrc}`);
+    iframeVideo.classList.add('active');
+    iframeVideo.querySelector('iframe').setAttribute('src', `${iframeSrc}?autoStart=true`);
 }
-else{
-          ga('send', 'event', 'Street', 'Play', `Tizer ${iframeSrc}`); 
+// Close iframe with video tizer
+const closeVideo = (iframeSrc) => {
+    iframeVideo.classList.remove('active');
+    iframeVideo.querySelector('iframe').setAttribute('src', '');
 }
-
-
-        $('.iframe-tizer').css({ 'display': 'flex' }).prepend('<iframe src="" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen allowscriptaccess="always" allow="autoplay"></iframe>');
-
-        $('.iframe-tizer iframe').attr('src', `${iframeSrc}?autoStart=true`);
-    })
-
-    $(document).on('click', '.close-tizer', function() {
-        $('.iframe-tizer').css({ 'display': 'none' }).html('<div class="close-tizer">x</div>');
-    });
-
-
-});
