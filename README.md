@@ -1,2 +1,2 @@
 # roast
-LP channel tnt4 for programm Roast
+LP for channel tnt4 (programm Roast)
