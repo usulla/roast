@@ -1,69 +1,24 @@
 <!doctype html>
 <html lang="ru">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" type="image/png" href="/bin/icons/favicon.png">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    <title>Улица на ТНТ4</title>
-    <link href="style.css?ver=2" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet">
+    <title>Прожарка по-голивудски</title>
+    <link href="style.css?ver=1" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <script type="text/javascript" title="Universal Analytics">
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-66343339-4', 'auto');
-
-        ga('send', 'pageview');
-    </script>
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function (d, w, c) {
-            (w[c] = w[c] || []).push(function () {
-                try {
-                    w.yaCounter37539305 = new Ya.Metrika({
-                        id: 37539305,
-                        clickmap: true,
-                        trackLinks: true,
-                        accurateTrackBounce: true,
-                        webvisor: true
-                    });
-                } catch (e) {}
-            });
-
-            var n = d.getElementsByTagName("script")[0],
-                s = d.createElement("script"),
-                f = function () {
-                    n.parentNode.insertBefore(s, n);
-                };
-            s.type = "text/javascript";
-            s.async = true;
-            s.src = "https://mc.yandex.ru/metrika/watch.js";
-
-            if (w.opera == "[object Opera]") {
-                d.addEventListener("DOMContentLoaded", f, false);
-            } else {
-                f();
-            }
-        })(document, window, "yandex_metrika_callbacks");
-    </script>
+    <script src="js/dataTizer.json"></script>
+    <script async src="js/analitics.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script defer type="text/javascript" src="js/main.js?ver=1"></script>
 </head>
-
 <body>
-    <div class='logo'>
-        <img class="logo__desktop" src='images/street-logo-min-bg2.png' alt="Лого">
-        <img class="logo__mobile" src='images/header-mobie-min3.png' alt="Лого">
+    <div class="logo">
+        <img class="logo__desktop" src="images/street-logo-min-bg2.png" alt="Прожарка по-голивудски">
+        <img class="logo__mobile" src="images/header-mobie-min3.png" alt="Прожарка по-голивудски">
     </div>
     <div class="content">
         <p>
@@ -75,84 +30,40 @@
             Дональд Трамп, Чарли Шин, Джастин Бибер и Джеймс Франко будут «прожарены» лучшими комиками Америки, а также
             выступят Снуп Догг, Ларри Кинг, Майк Тайсон, Уилл Феррелл и другие звёздные гости.
         </p>
-        <div class='play-tizer'>
-            <img src='images/street_play.png' alt="Плей">
+        <div class="play-tizer" data-src="https://rutube.ru/play/embed/11978833">
+            <img src="images/street_play.png" alt="Плей">
             <span>Смотреть тизер</span>
         </div>
         <div class="items">
-            <div class="carousel__item" data-src="https://rutube.ru/play/embed/11978737">
-                <div class="preview">
-                    <img src="images/heroes/h1.png" alt="Улица на ТНТ4">
-                    <div class="gray-over"></div>
-                    <div class="play-button">
-                        <img src='images/street_play.png' alt="Улица на ТНТ4">
-                    </div>
-                    <div class="series-title">
-                        <span></span>
-                        <br>
-                        <span></span>
-                    </div>
-                </div>
-                <div class="series-description">
-                    ДОНАЛЬД<br>
-                    ТРАМП
-                </div>
-            </div>
-            <div class=carousel__item data-src="https://rutube.ru/play/embed/11978717">
-                <div class="preview">
-                    <img src='images/heroes/h2.png' alt="Улица на ТНТ4">
-                    <div class="gray-over"></div>
-                    <div class="play-button">
-                        <img src='images/street_play.png' alt="Улица на ТНТ4">
-                    </div>
-                    <div class="series-title">
-                        <span>17</span>
-                        <br>
-                        <span>июня</span>
-                    </div>
-                </div>
-                <div class="series-description">
-                    ДЖАСТИН<br>
-                    БИБЕР
-                </div>
-            </div>
-            <div class=carousel__item data-src="https://rutube.ru/play/embed/11978833">
-                <div class="preview">
-                    <img src='images/heroes/h3.png' alt="Улица на ТНТ4">
-                    <div class="gray-over"></div>
-                    <div class="play-button">
-                        <img src='images/street_play.png' alt="Улица на ТНТ4">
-                    </div>
-                    <div class="series-title">
-                        <span>24</span>
-                        <br>
-                        <span>июня</span>
-                    </div>
-                </div>
-                <div class="series-description">
-                    ДЖЕЙМС<br>
-                    ФРАНКО
-                </div>
-            </div>
-            <div class=carousel__item data-src="https://rutube.ru/play/embed/11978858">
-                <div class="preview">
-                    <img src='images/heroes/h4.png' alt="Улица на ТНТ4">
-                    <div class="gray-over"></div>
-                    <div class="play-button">
-                        <img src='images/street_play.png' alt="Улица на ТНТ4">
-                    </div>
-                    <div class="series-title">
-                        <span>17</span>
-                        <br>
-                        <span>июня</span>
-                    </div>
-                </div>
-                <div class="series-description">
-                    ЧАРЛИ<br>
-                    ШИН
-                </div>
-            </div>
-            <!-- END2 -->
+                <script>
+                try {
+                    var dataTizers = JSON.parse(dataTizers);
+                    console.log(dataTizers[0])
+                    var innerTizer = dataTizers.map((item) => (
+                        `<div class="carousel__item">
+                            <div class="preview" data-src="https://rutube.ru/play/embed/${item.videoUrl}">
+                            <img src="images/heroes/${item.imageSrc}" alt="Прожарка на ТНТ4">
+                            <div class="gray-over"></div>
+                            <div class="play-button">
+                                <img src='images/street_play.png' alt="Прожарка на ТНТ4">
+                            </div>
+                            <div class="series-title">
+                                <span>${item.releaseDay}</span>
+                                <br>
+                                <span>${item.releaseMonth}</span>
+                            </div>
+                            </div>
+                            <div class="series-description">
+                                ${item.title[0]}<br>
+                                ${item.title[1]}
+                            </div>
+                        </div>`
+                        )).join('')
+                    document.querySelector('.items').innerHTML = innerTizer;
+                      } catch (e) {
+                        console.log(e + '');
+                      }
+                </script>
         </div>
     </div>
 
@@ -169,27 +80,16 @@
         <a class="rutube-soc" href="https://rutube.ru/video/person/1131656/" target="_blank"><span><img
                     class="rutube-logo" src='images/rutube-logo.png' alt="Улица на ТНТ4"></span></a>
     </div>
-    </div>
     <div class="iframe-tizer">
+            <iframe src="" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen allowscriptaccess="always" allow="autoplay"></iframe>
         <div class="close-tizer">x
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script type="text/javascript" src="https://ulica.tnt4.ru/bin/street/js/main.js?ver=2"></script>
     <noscript>
         <div><img src="https://mc.yandex.ru/watch/37539305" style="position:absolute; left:-9999px;" alt="" /></div>
     </noscript>
-    <!-- tns-counter.ru -->
-    <script type="text/javascript">
-        (new Image()).src = '//www.tns-counter.ru/V13a***R>' + document.referrer.replace(/\*/g, '%2a') +
-            '*tnt_ru/ru/UTF-8/tmsec=tnt4_total/' + Math.round(Math.random() * 1E9);
-    </script>
     <noscript>
         <img src="https://www.tns-counter.ru/V13a****tnt_ru/ru/UTF-8/tmsec=tnt4_total/" width="1" height="1" alt="" />
     </noscript>
-    <!--/ tns-counter.ru -->
 </body>
-
 </html>

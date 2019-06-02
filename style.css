@@ -301,7 +301,8 @@ h2 {
 
 @media screen and (max-width: 768px) {
     .carousel__item {
-        width: 48%;
+        width: 42%;
+        margin: 0 4%;
     }
 }
 
@@ -468,7 +469,9 @@ h2 {
     background: rgba(0, 0, 0, 0.5);
     display: none;
 }
-
+.iframe-tizer.active {
+    display: flex;
+}
 .iframe-tizer iframe {
     width: 95%;
     height: 90%;
