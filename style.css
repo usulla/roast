@@ -438,7 +438,9 @@
     transition: all 0.1s;
     opacity: 0;
   }
-  
+  .play-button.hide, .play-tizer.hide{
+    display: none!important;
+  }
   .carousel__item .play-button img {
     width: 100%;
   }

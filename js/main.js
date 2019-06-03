@@ -8,14 +8,21 @@
     //Click mainTizer
     mainTizerPlayButton.addEventListener('click', (e) => consrolVideo.playVideo(iframeVideo, e.currentTarget.dataset.src, iframeBlock));
 
-    // Click one of tizers
     previewTizers.forEach(item => {
+        checkButtonPlay(item);
+        // Click one of tizers
         item.addEventListener('click', (e) => consrolVideo.playVideo(iframeVideo, e.currentTarget.dataset.src, iframeBlock))
     });
 
     // Click button close video
     closeVideoButton.addEventListener('click', () => consrolVideo.closeVideo(iframeVideo, iframeBlock));
 
+    // Show or hide Play button
+    function checkButtonPlay(elem) {
+        const srcVideo = elem.dataset.src;
+        const buttonPlayVideo = elem.querySelector('.play-button');
+        (srcVideo === '') ? (buttonPlayVideo.classList.add('hide')) : '';
+    }
     const consrolVideo = {
         // Open iframe with video tizer
         playVideo: function (iframeVideo, iframeSrc, iframeBlock) {

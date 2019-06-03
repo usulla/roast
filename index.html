@@ -36,17 +36,16 @@
             выступят Снуп Догг, Ларри Кинг, Майк Тайсон, Уилл Феррелл и другие звёздные гости.
         </p>
         <div class="play-tizer" data-src="https://rutube.ru/play/embed/12416232">
-            <img src="images/street_play.png" alt="Плей">
+            <img src="images/street_play.png" alt="Смотреть тизер">
             <span>Смотреть тизер</span>
         </div>
         <div class="items">
                 <script>
                 try {
                     var dataTizers = JSON.parse(dataTizers);
-                    console.log(dataTizers[0])
                     var innerTizer = dataTizers.map((item) => (
                         `<div class="carousel__item">
-                            <div class="preview" data-src="https://rutube.ru/play/embed/${item.videoUrl}">
+                            <div class="preview" data-src="${item.videoUrl}">
                             <img src="images/heroes/${item.imageSrc}" alt="Прожарка на ТНТ4">
                             <div class="gray-over"></div>
                             <div class="play-button">
@@ -67,6 +66,7 @@
                       } catch (e) {
                         console.log(e + '');
                       }
+                      document.query
                 </script>
         </div>
 
