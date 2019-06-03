@@ -451,6 +451,8 @@
     line-height: 1.1;
     text-transform: uppercase;
     text-align: center;
+    align-items: center;
+    flex-direction: column;
   }
   
   .carousel__item .series-description {
@@ -491,7 +493,7 @@
   }
   
   .carousel__item:hover .series-title {
-    display: block;
+    display: flex;
   }
   
   .carousel__item:hover .series-title span:nth-child(1) {
