@@ -112,7 +112,7 @@
   
   @media screen and (max-width: 786px) {
     body {
-      background: #4d2d21;
+      background: #332727;
     }
   }
   .main {
@@ -247,10 +247,18 @@
     .logo img.logo__mobile {
       display: block;
       width: 100%;
+     position: relative;
+     margin-top: -40px;
+    
     }
   
     .logo_tnt4 {
       display: none;
+    }
+    .top__datatext {
+
+        z-index: 2;
+        position: relative;
     }
   }
   
@@ -336,7 +344,7 @@
   
   @media screen and (max-width: 768px) {
     .content {
-      margin: -44vw auto 0;
+        margin: -64vw auto 0;
     }
   }
   
