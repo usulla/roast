@@ -112,7 +112,7 @@
   
   @media screen and (max-width: 786px) {
     body {
-      background: #31221F;
+      background: #322826;
     }
   }
   .main {
@@ -141,7 +141,7 @@
     max-width: 910px;
     color: #ffc37b;
     font-family: Circe;
-    font-size: 17px;
+    font-size: 19px;
     font-weight: 400;
     line-height: 25px;
     margin: 0 auto;
@@ -150,7 +150,7 @@
   
   @media screen and (max-width: 1024px) {
     .content p {
-      font-size: 12px;
+      font-size: 14px;
       line-height: 20px;
     }
   }
@@ -248,14 +248,17 @@
       width: 100%;
      position: relative;
      margin-top: -40px;
-    
+     
     }
   
     .logo_tnt4 {
-      display: none;
+         width: 25vw;
+    z-index: 3;
+	right:auto;
     }
     .top__datatext {
-
+	    background: #181212;
+padding-top:32vw;
         z-index: 2;
         position: relative;
     }
