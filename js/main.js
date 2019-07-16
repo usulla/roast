@@ -11,7 +11,10 @@
     previewTizers.forEach(item => {
         checkButtonPlay(item);
         // Click one of tizers
-        item.addEventListener('click', (e) => consrolVideo.playVideo(iframeVideo, e.currentTarget.dataset.src, iframeBlock))
+        var srcVideo = item.dataset.src;
+        if (srcVideo != "") {
+           item.addEventListener('click', (e) => consrolVideo.playVideo(iframeVideo, e.currentTarget.dataset.src, iframeBlock))
+        }
     });
 
     // Click button close video
